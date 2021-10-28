@@ -23,7 +23,7 @@ let favorite_genre_of_music = 'Поп'
 let favorite_artist = 'Dua Lipa'
 let favorite_movie_genre = 'Фэнтези'
 let favourite_tv_show = 'Офис'
-let pets = 'Кошка'
+let pets = 'Кот'
 //Вывод в консоль
 console.log('Фамилия: '+surname)
 console.log('Имя: '+NAME)
