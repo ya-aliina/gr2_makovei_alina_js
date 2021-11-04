@@ -84,7 +84,7 @@ function get_last_letter (arr) { // Если 'ь' возвращаем букв�
 }
 
 do {
-    new_city = prompt(`Введите название города на букву "${last_letter}":`);
+    new_city = prompt(Введите название города на букву "${last_letter}":);
     first_letter = new_city[0];
     console.log(new_city);
 
@@ -97,5 +97,5 @@ do {
     }
 
 } while (first_letter !== last_letter) {
-    alert(`Игра окончена. Ваши очки: ${score}`);
+    alert(Игра окончена. Ваши очки: ${score});
 }
