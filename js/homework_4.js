@@ -92,10 +92,7 @@ do {
         score ++;
         last_letter = get_last_letter(new_city);
     }
-    else {
-        break;
-    }
-
-} while (first_letter !== last_letter) {
+    
+} while (first_letter === last_letter) {
     alert(`Игра окончена. Ваши очки: ${score}`);
 }
