@@ -11,7 +11,7 @@ function get_new_date () {
 
     let today = new Date();
     let tomorrow = today.getTime() + MS_DAY;
-    let result_date = new Date (tomorrow) // Зачем нужна эта строка, если она идентична той, что выше?
+    let result_date = new Date (tomorrow);
 
     let year = result_date.getFullYear();
     let day_number = result_date.getDate();
