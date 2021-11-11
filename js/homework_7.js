@@ -21,6 +21,8 @@
 
 function Calculator (calculatorName) {
     this.name = calculatorName;
+    
+    this.history = [];
 
     // Проверка входящих параметров
     this.checkTwoElementsIsNan = function (element1, element2) {
@@ -120,8 +122,6 @@ function Calculator (calculatorName) {
 
         return `${day}.${month}.${year} ${hours}:${minutes}`;
     };
-    
-    this.history = [];
 
     // Добавляем в историю
     this.callHistory = function () {
