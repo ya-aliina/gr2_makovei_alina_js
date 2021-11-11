@@ -146,6 +146,10 @@ let Calculator1 = new Calculator('Мой калькулятор');
 let Calculator2= new Calculator('Еще один калькулятор');
 let Calculator3 = new Calculator('И еще один калькулятор');
 
+console.log(Calculator1.doAddition(2, 3, 5, 6, 8));
+console.log(Calculator2.doSubtraction(100, 30,));
+console.log(Calculator3.doDivision(100, 4));
+console.log(Calculator1.doMultiplication(2, 3, 5, 6, 8));
 
 
 
