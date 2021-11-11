@@ -18,7 +18,6 @@
 Калькулятор должен уметь вывести историю действий в консоль и уметь
 очищать историю действий.
 ----------------------------------------------------------------------*/
-let history = [];
 
 function Calculator (calculatorName) {
     this.name = calculatorName;
@@ -121,29 +120,33 @@ function Calculator (calculatorName) {
 
         return `${day}.${month}.${year} ${hours}:${minutes}`;
     };
+    
+    this.history = [];
 
     // Добавляем в историю
-    callHistory = function () {
-        for (let i = 0; i < history.length; i++) {
-            let string = history[i];
+    this.callHistory = function () {
+        for (let i = 0; i < this.history.length; i++) {
+            let string = this.history[i];
             console.log(string);
         }
 
-        if (history.length < 1) {
+        if (this.history.length < 1) {
             console.log(`История пуста`)
             return null;
         } else { return history; }
     };
 
     //Удаляем историю
-    deleteHistory = function () {
-        return history = [];
+    this.deleteHistory = function () {
+        return this.history = [];
     };
 }
 
 let Calculator1 = new Calculator('Мой калькулятор');
 let Calculator2= new Calculator('Еще один калькулятор');
 let Calculator3 = new Calculator('И еще один калькулятор');
+
+
 
 
 
