@@ -124,7 +124,7 @@ function Calculator (calculatorName) {
     };
 
     // Добавляем в историю
-    this.callHistory = function () {
+    this.callHistory = function (history) {
         for (let i = 0; i < this.history.length; i++) {
             let string = this.history[i];
             console.log(string);
