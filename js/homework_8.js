@@ -35,7 +35,6 @@ setTimeout(createBlueSquare, 3000, 10);
 function changeSquareToBiggerAndGreen (numberOfSquares) {
 
     for (let i = 0; i < numberOfSquares; i++) {
-
         let oneOfSquares = document.querySelectorAll('div.square')[i];
 
         oneOfSquares.style.height = '100px';
@@ -52,7 +51,6 @@ setTimeout(changeSquareToBiggerAndGreen, 6000, 10);
 function changeSquaresToRedAndYellow (numberOfSquares) {
 
     for (let i = 0; i < numberOfSquares; i++) {
-
         let oneOfSquares = document.querySelectorAll('div.square')[i];
 
         if (i % 3 === 0) { //или i % 3 - 2 === 0 ?
@@ -73,6 +71,7 @@ function deleteSquaresChangeBackground (numberOfSquares) {
         let oneOfSquares = document.querySelectorAll('div.square')[i];
         oneOfSquares.remove();
     }
+    
     page.style.background = 'black'
 
     return true;
