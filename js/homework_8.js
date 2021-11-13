@@ -23,7 +23,7 @@ function createBlueSquare (numberOfSquares) {
 
         square.style.height = '50px';
         square.style.width = '50px';
-        square.style.background = 'blue';
+        square.style.background = 'aqua';
         square.style.margin = '0 auto';
         square.style.marginBottom = '10px'
     }
@@ -53,7 +53,7 @@ function changeSquaresToRedAndYellow (numberOfSquares) {
     for (let i = 0; i < numberOfSquares; i++) {
         let oneOfSquares = document.querySelectorAll('div.square')[i];
 
-        if (i % 3 === 0) { //или i % 3 - 2 === 0 ?
+        if (i % 3 - 2 === 0) {
             oneOfSquares.style.background = 'red';
         } else {
             oneOfSquares.style.background = 'yellow';
