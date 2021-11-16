@@ -41,7 +41,7 @@ function Calculator (calculatorName) {
         }
     };
 
-    //сложение
+    //Cложение
     this.doAddition = function (...arg) {
         if ( this.checkArrayElementsIsNan(arg) ) {
             return null;
@@ -59,7 +59,7 @@ function Calculator (calculatorName) {
         return result;
     };
 
-    //вычитание
+    //Вычитание
     this.doSubtraction = function (subtrahend, subtractor) {
         if ( this.checkTwoElementsIsNan(subtrahend, subtractor) ) {
             return null;
@@ -73,7 +73,7 @@ function Calculator (calculatorName) {
         return result;
     };
 
-    //умножение
+    //Умножение
     this.doMultiplication = function (...arg) {
         if ( this.checkArrayElementsIsNan(arg) ) {
             return null;
@@ -91,7 +91,7 @@ function Calculator (calculatorName) {
         return result;
     };
 
-    //деление
+    //Деление
     this.doDivision = function (dividend, divider) {
         if ( this.checkTwoElementsIsNan(dividend, divider) ) {
             return null;
