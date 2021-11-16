@@ -36,7 +36,3 @@ $(document).ready(function() {
         console.log(`${ $(this).width() }, ${ $(this).height() }`);
     })
 });
-
-
-
-
