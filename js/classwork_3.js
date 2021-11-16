@@ -65,7 +65,8 @@ function changeColorAndAddTriangle (ourCollection) {
 
         if ((i + 1) % 3 === 0 && (i + 1) % 15 !== 0) {
             oneOfSquares.style.background = 'red'
-        } else if ((i + 1) % 15 === 0) {
+        } 
+        if ((i + 1) % 15 === 0) {
             oneOfSquares.style.background = 'linear-gradient(to right bottom, transparent 48%, rgb(114, 134, 57) 50%) left / 50.25% 100% no-repeat, linear-gradient(to left bottom, transparent 48%, rgb(114, 134, 57) 50%) right / 50.25% 100% no-repeat';
             oneOfSquares.style.alignItems = 'flex-end';
             oneOfSquares.style.fontSize = '5px';
