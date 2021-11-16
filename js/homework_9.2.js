@@ -8,14 +8,13 @@
 +4. Изменить цвет каждого 3-го квадрата на красный, каждый 15 квадрат сделать
 треугольником цветом хаки и любые 5 сделать желтым.
 +5. Удалить все красные квадраты.
-Каждое действие должно выполниться через 2 секунды от предыдущего, первое
++ Каждое действие должно выполниться через 2 секунды от предыдущего, первое
 действие также должно иметь задержку 2 секунды.
  -----------------------------------------------------------------------*/
 $(document).ready(function() {
 
     const MS_SECOND = 1000;
-    let numberOfSquares = 100;
-
+ 
     function createBlueSquares (numberOfSquares) {
         for (let i = 0; i < numberOfSquares; i++) {
             $('body').append('<div></div>');
@@ -90,10 +89,11 @@ $(document).ready(function() {
             if  ($(element).css('background-color') === 'rgb(255, 0, 0)') {
                 $(element).remove();
             }
+            return true;
         });
     }
 
-    setTimeout(createBlueSquares, 2 * MS_SECOND, numberOfSquares);
+    setTimeout(createBlueSquares, 2 * MS_SECOND, 100);
     setTimeout(changeToBiggerAndPurple, 4 * MS_SECOND);
     setTimeout(addNumber, 6 * MS_SECOND );
     setTimeout(changeColorAndAddTriangle, 8 * MS_SECOND );
