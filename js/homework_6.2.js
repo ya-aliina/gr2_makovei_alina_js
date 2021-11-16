@@ -21,6 +21,7 @@ function find_dates_difference (date_1, date_2) {
 
     return difference_in_day;
 }
+
 let date_1 = new Date('2010-01-20');
 let date_2 = new Date('2010-01-15');
 
