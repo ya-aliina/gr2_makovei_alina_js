@@ -13,12 +13,12 @@
 также должно иметь задержку 3 секунды.
 
 ----------------------------------------------------------------------------------*/
+const MS_SECOND = 1000;
+let squares = document.getElementsByTagName('div');
 
 function createBlueSquare (numberOfSquares) {
     for (let i = 0; i < numberOfSquares; i++) {
-
         let square = document.createElement('div');
-        square.setAttribute('class', 'square')
         document.body.prepend(square);
 
         square.style.height = '50px';
@@ -30,12 +30,10 @@ function createBlueSquare (numberOfSquares) {
     return true;
 }
 
-setTimeout(createBlueSquare, 3000, 10);
+function changeSquareToBiggerAndGreen (ourCollection) {
 
-function changeSquareToBiggerAndGreen (numberOfSquares) {
-
-    for (let i = 0; i < numberOfSquares; i++) {
-        let oneOfSquares = document.querySelectorAll('div.square')[i];
+    for (let i = 0; i < ourCollection.length; i++) {
+        let oneOfSquares = ourCollection[i];
 
         oneOfSquares.style.height = '100px';
         oneOfSquares.style.width = '100px';
@@ -46,14 +44,12 @@ function changeSquareToBiggerAndGreen (numberOfSquares) {
     return true;
 }
 
-setTimeout(changeSquareToBiggerAndGreen, 6000, 10);
+function changeSquaresToRedAndYellow (ourCollection) {
 
-function changeSquaresToRedAndYellow (numberOfSquares) {
+    for (let i = 0; i < ourCollection.length; i++) {
+        let oneOfSquares = ourCollection[i];
 
-    for (let i = 0; i < numberOfSquares; i++) {
-        let oneOfSquares = document.querySelectorAll('div.square')[i];
-
-        if (i % 3 - 2 === 0) {
+        if ( (i + 1) % 3 === 0 ) {
             oneOfSquares.style.background = 'red';
         } else {
             oneOfSquares.style.background = 'yellow';
@@ -62,19 +58,18 @@ function changeSquaresToRedAndYellow (numberOfSquares) {
     return true;
 }
 
-setTimeout(changeSquaresToRedAndYellow, 9000, 10);
+function deleteSquaresChangeBackground (ourCollection) {
 
-function deleteSquaresChangeBackground (numberOfSquares) {
-    let page = document.documentElement;
-
-    for (let i = numberOfSquares - 1; i >= 0; i -= 1) {
-        let oneOfSquares = document.querySelectorAll('div.square')[i];
+    for (let i = ourCollection.length - 1; i >= 0; i -= 1) {
+        let oneOfSquares = ourCollection[i];
         oneOfSquares.remove();
     }
-    
-    page.style.background = 'black'
 
+    document.documentElement.style.background = 'black';
     return true;
 }
 
-setTimeout(deleteSquaresChangeBackground, 12000, 10);
+setTimeout(createBlueSquare, 3 * MS_SECOND, 10);
+setTimeout(changeSquareToBiggerAndGreen, 6 * MS_SECOND, squares);
+setTimeout(changeSquaresToRedAndYellow, 9 * MS_SECOND, squares);
+setTimeout(deleteSquaresChangeBackground, 12 * MS_SECOND, squares);
