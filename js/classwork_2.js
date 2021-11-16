@@ -29,7 +29,6 @@ console.log (result);
 Напишите функцию, возвращает новый массив без предоставленных
 значений. Используйте примитивные типы.
 ------------------------------------------------------------*/
-
 function delete_elements(array, check_array) {
     if (!Array.isArray(array) || !Array.isArray(check_array)) {
         alert('Это не массив');
@@ -49,4 +48,4 @@ function delete_elements(array, check_array) {
 let first_array = [1, 2, 2, 34, 45, 34, 3, 7, 8, 7];
 let second_array = [1, 7];
 
-console.log(delete_elements(first_array, second_array));
+console.log( delete_elements(first_array, second_array) );
