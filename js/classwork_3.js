@@ -76,10 +76,10 @@ function changeColorAndAddTriangle (ourCollection) {
 }
 
 function deleteRedSquares (ourCollection) {
-    for (let i = ourCollection.length; i >= 0; i -= 1) {
+    for (let i = 0; i >= ourCollection.length; i++) {
         let oneOfSquares = ourCollection[i];
 
-        if ((i + 1) % 3 === 0 && (i + 1) % 15 !== 0) {
+        if ( oneOfSquares.style.background === 'red') {
             oneOfSquares.remove();
         }
     }
