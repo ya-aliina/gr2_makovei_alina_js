@@ -28,10 +28,10 @@ function createBlueSquare (numberOfSquares) {
     return true;
 }
 
-function changeSquareToSmallerAndPurple (numberOfSquares) {
+function changeSquareToSmallerAndPurple (ourCollection) {
 
-    for (let i = 0; i < numberOfSquares; i++) {
-        let oneOfSquares = squares[i];
+    for (let i = 0; i < ourCollection.length; i++) {
+        let oneOfSquares = ourCollection[i];
 
         oneOfSquares.style.minHeight = '10px';
         oneOfSquares.style.minWidth = '10px';
@@ -88,7 +88,7 @@ function deleteRedSquares (ourCollection) {
 }
 
 setTimeout(createBlueSquare, 2 * MS_SECOND, 1000);
-setTimeout(changeSquareToSmallerAndPurple, 4 * MS_SECOND, 1000);
+setTimeout(changeSquareToSmallerAndPurple, 4 * MS_SECOND, squares);
 setTimeout(addNumber, 6 * MS_SECOND, squares);
 setTimeout(changeColorAndAddTriangle, 8 * MS_SECOND, squares);
 setTimeout(deleteRedSquares, 10 * MS_SECOND, squares);
