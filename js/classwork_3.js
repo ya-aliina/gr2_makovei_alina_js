@@ -25,7 +25,7 @@ function createBlueSquare (numberOfSquares) {
         square.style.background = 'aqua';
         square.style.marginRight = '10px'
     }
-    return 'done';
+    return true;
 }
 
 function changeSquareToSmallerAndPurple (numberOfSquares) {
@@ -40,7 +40,7 @@ function changeSquareToSmallerAndPurple (numberOfSquares) {
         oneOfSquares.style.margin = '0 auto';
         oneOfSquares.style.marginRight = '10px';
     }
-    return 'done';
+    return true;
 }
 
 function addNumber (ourCollection) {
@@ -56,7 +56,7 @@ function addNumber (ourCollection) {
 
         oneOfSquares.innerText = `${i + 1}`;
     }
-    return 'done';
+    return true;
 }
 
 function changeColorAndAddTriangle (ourCollection) {
@@ -73,7 +73,7 @@ function changeColorAndAddTriangle (ourCollection) {
            
         }
     }
-    return 'done';
+    return true;
 }
 
 function deleteRedSquares (ourCollection) {
@@ -84,7 +84,7 @@ function deleteRedSquares (ourCollection) {
             oneOfSquares.remove();
         }
     }
-    return 'done';
+    return true;
 }
 
 setTimeout(createBlueSquare, 2 * MS_SECOND, 1000);
