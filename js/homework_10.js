@@ -56,7 +56,7 @@ $(document).ready(function() {
                 getEventInformation(description, i, block);
             } else {
                 let info = document.createElement('div')
-                info.append(`${name}: ${description} `); //создаем 'обертку' для каждого пункта
+                info.append(`${name}: ${description}`); //создаем 'обертку' для каждого пункта
 
                 info.style.color = '#002137';
                 info.style.fontSize = '18px';
