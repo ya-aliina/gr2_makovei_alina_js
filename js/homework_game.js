@@ -25,7 +25,6 @@ let column = {
 
 let bird = {
     img: new Image(),
-
     x: 450,
     y: 150,
     gravity: 1.5,
