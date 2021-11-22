@@ -5,6 +5,7 @@
 Ошибки по вводу значений вывести в консоль.
 Результат вывести с помощью функции alert.
 ===========================================================================================*/
+const PI = 3.141592653589793238462643;
 
 //проверка 1 переменной
 let n = prompt ('Укажите расстояние (км)','0');
@@ -22,12 +23,12 @@ if (isNaN(d)) {
 } else if (d<0) {
     console.error ('Введенное значение диаметра колеса не может быть отрицательным');
 } else {
-    const PI = 3.141592653589793238462643;
     let n_inches = n * 39370.1; // расстояние в дюймах
     let c = PI * d; // длина одного оборота
-    let one_wheel_turn = n_inches/c; // количество оборотов 1 колеса
-    let all_wheels_turn = one_wheel_turn*4; // количество оборотов всех колес
+    let one_wheel_turn = n_inches / c; // количество оборотов 1 колеса
+    let all_wheels_turn = one_wheel_turn * 4; // количество оборотов всех колес
     let result_one_wheel = parseInt(one_wheel_turn); 
     let result_all_wheels = parseInt(all_wheels_turn);
+    
     alert (`Количество оборотов 1 колеса при расстоянии ${n} км = ${result_one_wheel}, а всех колес = ${result_all_wheels}.`)
 }
