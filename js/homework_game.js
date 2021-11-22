@@ -25,7 +25,7 @@ let column = {
 
 let bird = {
     img: new Image(),
-    imgSecond: new Image(),
+
     x: 450,
     y: 150,
     gravity: 1.5,
@@ -39,7 +39,7 @@ gameWorld.background.src = 'img/background.jpg';
 gameWorld.ground.src = 'img/ground.png';
 column.top.src = 'img/tube_up.png';
 column.bottom.src = 'img/tube_down.png';
-column.bottom.src = 'img/tube_down.png';
+
 
 function flyBird () {
     function doFist () {
