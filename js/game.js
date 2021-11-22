@@ -78,10 +78,10 @@ function checkCollision (bird, column, gameWorld) {
 }
 
 function reset () {
+    level = 1;
     bird.x = 450;
     bird.y = 150;
     score = 0;
-    level = 1;
     column.position = [{
         x: canvas.width ,
         y: 0,
