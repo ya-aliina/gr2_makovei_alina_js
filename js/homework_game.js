@@ -110,8 +110,10 @@ function goNextLevel (score, column) {
         column.spaceBetween = 80;
     }
 }
-//отклик при нажатии на любую клавишу
+//отклик при нажатии на любую клавишу, кнопку мыши или касание
 document.addEventListener('keydown', () => bird.moveUp());
+document.addEventListener('touchstart', () => bird.moveUp());
+document.addEventListener('click', () => bird.moveUp());
 
 //прорисовка
 function render() {
