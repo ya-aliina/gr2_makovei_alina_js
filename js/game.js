@@ -35,7 +35,6 @@ let bird = {
 }
 
 //вставка изображений
-// bird.img.src = 'img/bird-1.png';
 gameWorld.background.src = 'img/background.jpg';
 gameWorld.ground.src = 'img/ground.png';
 column.top.src = 'img/tube_up.png';
@@ -82,6 +81,7 @@ function reset () {
     bird.x = 450;
     bird.y = 150;
     score = 0;
+    level = 1;
     column.position = [{
         x: canvas.width ,
         y: 0,
